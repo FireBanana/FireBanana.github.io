@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Owais Akhtar - Portfolio</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -80,7 +80,7 @@
         </div>
     </div>
     <!-- End #about -->
-    
+
 
     <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
@@ -110,21 +110,34 @@
     </div>
     <!-- End #education -->
 
+    <div id="projectviewer" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1 id="viewerTitle">Project Name</h1>
+            <p id="viewerDesc" class="lead">This is the project description</p>
+            <img id="viewerImg" src="" />
+            <button class="btn">Close</button>
+        </div>
+
+    </div>
+
     <div id="projects" class="background-alt">
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row">
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="images/portfolio1/1.png" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
+                        <h3>Adventure Racing</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            I was part of a team for this project. A clone to the popular Hill Climb Racing, It involves driving on an endless track and collecting coins to upgrade your player. I handled networking (using GameSparks) and parts of the gameplay. <span><a href="https://play.google.com/store/apps/details?id=com.herocraft.game.adventure.buggy.racing&hl=en">Store link</a></span>
                         </p>
-                        <a href="#">View Project</a>
+                        <a id="proj1" href="#">View Project</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -132,15 +145,31 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="images/manicminer/1.png" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
+                        <h3>Manic Miner</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            This is one of the first games I ever made! Everything in it is made by yours truly. A fun little endless runner with highscores and powerups. <span><a href="https://play.google.com/store/apps/details?id=com.Sourpuss.Digger">Store link.</a></span>
                         </p>
-                        <a href="#">View Project</a>
+                        <a id="proj2" href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/moviesys/1.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Movie Manager</h3>
+                        <p>
+                            A movie manager created in Windows Presentation Forms (WPF) which saves the episodes of the series/movie that you are watching, has the ability to play from where you left off and get details/pictures from IMDB.
+                        </p>
+                        <a id="proj3" href="#">View Project</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -222,6 +251,69 @@
     <script src="js/particles.js"></script>
     <script src="js/scripts.min.js"></script>
     <script src="js/app.js">
+    </script>
+
+    <script>
+        $(function() {
+
+            var showProjectView = function(imageUrl, title, description, additionalImages) {
+                    $('#projectviewer').css({
+                        'display': 'block'
+                    });
+                    $('body').css({
+                        'overflow': 'hidden'
+                    });
+
+                    $('#viewerTitle').html(title);
+                    $('#viewerDesc').html(description);
+                    $('#viewerImg').attr('src', imageUrl);
+
+                    if (additionalImages.length != 0) {
+                        additionalImages.forEach(function(item) {
+                            $('#viewerImg').after($('<img class="tempImg"/>').attr('src', item));
+                        });
+                    }
+                }
+                //------------Projects------------------
+
+            $('#proj1').click(function(e) {
+                e.preventDefault();
+                showProjectView('images/portfolio1/1.png', 'Adventure Racing', 'I was part of a team for this project. A clone to the popular Hill Climb Racing, It involves driving on an endless track and collecting coins to upgrade your player. I handled networking (using GameSparks) and parts of the gameplay.', ['images/portfolio1/2.png', 'images/portfolio1/3.png']);
+            });
+
+            $('#proj2').click(function(e) {
+                e.preventDefault();
+                showProjectView('images/manicminer/1.png', 'Manic Miner', 'This is one of the first games I ever made! Everything in it is made by yours truly. A fun little endless runner with highscores and powerups.', ['images/manicminer/2.png', 'images/manicminer/3.png']);
+            });
+
+            $('#proj3').click(function(e) {
+                e.preventDefault();
+                showProjectView('images/moviesys/1.png', 'Movie System', 'A movie manager created in Windows Presentation Forms (WPF) which saves the episodes of the series/movie that you are watching, has the ability to play from where you left off and get details/pictures from IMDB', ['images/moviesys/2.png', 'images/moviesys/3.png']);
+            });
+
+            //---------------------------------------
+            $('.close').click(function() {
+                $('#projectviewer').css({
+                    'display': 'none'
+                });
+                $('body').css({
+                    'overflow': 'auto'
+                });
+                $('.tempImg').remove();
+                $('#projects').scrollTop();
+            });
+
+            $('.btn').click(function() {
+                $('#projectviewer').css({
+                    'display': 'none'
+                });
+                $('body').css({
+                    'overflow': 'auto'
+                });
+                $('.tempImg').remove();
+                $('#projects').scrollTop();
+            });
+        });
     </script>
 </body>
 
