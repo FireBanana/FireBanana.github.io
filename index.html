@@ -74,7 +74,7 @@
                 <div class="col-md-8">
                     <p>
                         I'm a passionate software engineer with several years of experience in .Net. Always looking to advance my skill-set and tackle challenging industrial projects so that I can improve day by day! I'm familiar with other language frameworks as well, such
-                        as Javascript, Python, and web technologies (HTML, CSS). Learning is a big part of my lifestyle and I never back down from studying new methods, architectures, languages, and frameworks. I hope we can have a successful collaboration
+                        as Javascript and web technologies (HTML, CSS), as well as Dart and Flutter for mobile app development. Learning is a big part of my lifestyle and I never back down from studying new methods, architectures, languages, and frameworks. I hope we can have a successful collaboration
                         ahead!
                     </p>
                 </div>
@@ -130,6 +130,22 @@
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/simpleweather/2.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Simple Weather Searcher</h3>
+                        <p>
+                            This is a cross-platform mobile app that I created using the Flutter framework and Dart. It uses the Google Places API to get auto-completion for cities and OpenWeatherMap API for the weather information <span><a href="https://github.com/FireBanana/SimpleWeatherSearcher">Github link</a></span>
+                        </p>
+                        <a id="proj4" class="view" href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
                 <div class="project shadow-large">
                     <div class="project-image">
                         <img src="images/portfolio1/1.png" />
@@ -293,6 +309,11 @@
             $('#proj3').click(function(e) {
                 e.preventDefault();
                 showProjectView('images/moviesys/1.png', 'Movie System', 'A movie manager created in Windows Presentation Forms (WPF) which saves the episodes of the series/movie that you are watching, has the ability to play from where you left off and get details/pictures from IMDB', ['images/moviesys/2.png', 'images/moviesys/3.png']);
+            });
+
+            $('#proj4').click(function(e) {
+                e.preventDefault();
+                showProjectView('images/simpleweather/1.png', 'Simple Weather Searcher', 'This is a cross-platform mobile app that I created using the Flutter framework and Dart. It uses the Google Places API to get auto-completion for cities and OpenWeatherMap API for the weather information', ['images/simpleweather/2.png', 'images/simpleweather/3.png', 'images/simpleweather/4.png']);
             });
 
             //---------------------------------------
