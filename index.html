@@ -120,7 +120,7 @@
             <span class="close">&times;</span>
             <h1 id="viewerTitle">Project Name</h1>
             <p id="viewerDesc" class="lead">This is the project description</p>
-            <img id="viewerImg" src="" />
+            <img id="viewerImg" class="mainImg" src="" />
             <button class="btn">Close</button>
         </div>
 
@@ -130,6 +130,21 @@
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/website_building/g.gif" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Builder's Website</h3>
+                        <p>
+                            This is a website made completely from scratch, no libraries for JS or CSS used, everything is completely Vanilla.
+                        </p>
+                        <a id="proj5" class="view" href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+
                 <div class="project shadow-large">
                     <div class="project-image">
                         <img src="images/simpleweather/2.png" />
@@ -201,14 +216,15 @@
     <div id="skills">
         <h2 class="heading">Skills</h2>
         <ul>
-            <li>.Net Core</li>
+            <li>.Net</li>
             <li>Asp.Net</li>
             <li>JavaScript</li>
             <li>HTML</li>
             <li>CSS</li>
             <li>C#</li>
             <li>Unity</li>
-            <li>Xamarin.Forms</li>
+            <li>Dart</li>
+            <li>Flutter</li>
         </ul>
     </div>
     <!-- End #skills -->
@@ -314,6 +330,11 @@
             $('#proj4').click(function(e) {
                 e.preventDefault();
                 showProjectView('images/simpleweather/1.png', 'Simple Weather Searcher', 'This is a cross-platform mobile app that I created using the Flutter framework and Dart. It uses the Google Places API to get auto-completion for cities and OpenWeatherMap API for the weather information', ['images/simpleweather/2.png', 'images/simpleweather/3.png', 'images/simpleweather/4.png']);
+            });
+
+            $('#proj5').click(function(e) {
+                e.preventDefault();
+                showProjectView('images/website_building/g.gif', 'Builder\'s Website', 'This is a website made completely from scratch, no libraries for JS or CSS used, everything is completely Vanilla.', []);
             });
 
             //---------------------------------------
