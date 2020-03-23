@@ -18,10 +18,14 @@
     <title>Owais Akhtar - Portfolio</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2a214f2caf.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scroller.js"></script>
+    <script src="js/scripts.js"></script>
 </head>
 
 <body>
@@ -57,9 +61,24 @@
     <!-- End header -->
 
     <div id="lead">
+        <div id="lead-back">
+            <div class="container" id="scroller1">
+                <i class="fas fa-mobile-alt fa-3x"></i>
+            </div>
+            <div class="container" id="scroller2">
+                <i class="fab fa-android fa-3x"></i>
+            </div>
+            <div class="container" id="scroller3">
+                <i class="fab fa-chrome fa-3x"></i>
+            </div>
+            <div class="container" id="scroller4">
+                <i class="fas fa-desktop fa-3x"></i>
+            </div>
+        </div>
+
         <div id="lead-content">
             <h1>Owais Akhtar</h1>
-            <h2>Software Engineer</h2>
+            <h2 id="mainDescription">Software Engineer</h2>
         </div>
         <!-- End #lead-content -->
 
@@ -146,6 +165,27 @@
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row">
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/petapp/1.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Scollar Pet App</h3>
+                        <p>
+                            The client had briefed me that he needed a mobile application and a server that would
+                            connect with his propietary dog collar. I needed to create an application for Android/iOs
+                            that connects to a central server in the house (RasPi). Another engineer was tasked with
+                            creating collars with small microcontrollers connected with LoRa transmitters. These
+                            transmitters would connect to the RasPi, and we could locate our pets and send instructions
+                            via our phones!
+                        </p>
+                        <a id="proj6" class="view" href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+
                 <div class="project shadow-large">
                     <div class="project-image">
                         <img src="images/website_building/g.gif" />
@@ -318,11 +358,6 @@
     </footer>
     <!-- End footer -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/particles.js"></script>
-    <script src="js/scripts.min.js"></script>
-    <script src="js/app.js">
-    </script>
 
     <script>
         $(function () {
@@ -370,6 +405,11 @@
             $('#proj5').click(function (e) {
                 e.preventDefault();
                 showProjectView('images/website_building/g.gif', 'Builder\'s Website', 'This is a website made completely from scratch, no libraries for JS or CSS used, everything is completely Vanilla.', []);
+            });
+
+            $('#proj6').click(function (e) {
+                e.preventDefault();
+                showProjectView('images/petapp/1.png', 'Scollar Pet App', 'The client had briefed me that he needed a mobile application and a server that would connect with his propietary dog collar. I needed to create an application for Android/iOs that connects to a central server in the house (RasPi). Another engineer was tasked with creating collars with small microcontrollers connected with LoRa transmitters. These transmitters would connect to the RasPi, and we could locate our pets and send instructions via our phones!', ['images/petapp/2.png', 'images/petapp/3.png', 'images/petapp/4.png']);
             });
 
             //---------------------------------------

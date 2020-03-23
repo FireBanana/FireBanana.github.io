@@ -1,6 +1,8 @@
-*/body {
-    font-family: 'Lato', sans-serif;
-    font-size: 16px
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
 body.active {
@@ -64,34 +66,35 @@ header {
 }
 
 header ul {
-    display: inline-block;
-    background: #fff;
+    display: inline;
+    background: rgba(255, 255, 255, 0.1);
     text-align: center;
-    padding: 10px;
+    padding: 30px;
     margin: 0;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px
 }
 
 header li {
-    display: inline-block
+    display: inline-block;
+    padding: 10px 1%;  
+
 }
 
 header a {
     display: block;
-    color: #3498db;
-    padding: 10px
+    color: white;
+    padding: 10px;
+    transition: 0.5s;
 }
 
 header a:hover {
-    color: #217dbb;
     text-decoration: none;
     background: #eee;
     border-radius: 4px
 }
 
 header a:focus {
-    color: #3498db;
     text-decoration: none
 }
 
@@ -116,7 +119,7 @@ header.sticky {
     top: 10px;
     color: #3498db;
     font-size: 1.5em;
-    z-index: 20;
+    z-index: 100;
     padding: 0 7px;
     border-radius: 4px;
     background: #fff
@@ -250,12 +253,31 @@ footer {
 #lead {
     position: relative;
     height: 100vh;
-    min-height: 500px;
-    max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: rgb(52,152,219);
+    background: linear-gradient(146deg, rgba(52,152,219,1) 0%, rgba(215,239,255,1) 100%); 
     background-size: cover;
-    padding: 15px;
     overflow: hidden
+}
+
+#lead-back{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+#lead-back .container{
+    opacity: 0.5;
+    position: absolute;
+    top: 50vh;
+    left: -90px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px black;
 }
 
 #lead-content {
@@ -274,16 +296,16 @@ footer {
 
 #lead-content h1 {
     color: #fff;
-    font-weight: 900;
+    font-weight: 500;
     font-size: 5em;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: -0.05em;
     line-height: 0.9em
 }
 
 #lead-content h2 {
-    color: #a0cfee;
-    font-weight: 500;
+    color: #fff;
+    font-weight: 300;
     font-size: 2.25em;
     margin-bottom: 15px
 }
@@ -296,7 +318,6 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(33, 125, 187, 0.8);
     z-index: 1
 }
 
@@ -763,16 +784,16 @@ footer {
 
 @media only screen and (max-width: 992px) {
     #lead {
-        height: auto;
+        /* height: auto;
         min-height: auto;
-        max-height: auto;
-        padding: 100px 15px
+        max-height: auto; 
+        padding: 100px 15px*/
     }
     #lead-content {
-        position: relative;
+        /* position: relative;
         transform: none;
         left: auto;
-        top: auto
+        top: auto */
     }
     #lead-content h1 {
         font-size: 3em
@@ -791,11 +812,13 @@ footer {
 @media only screen and (max-width: 768px) {
     header {
         position: fixed;
+        background-color: white;
         display: none;
         z-index: 999;
         animation: none;
         bottom: 0;
-        height: 100%
+        height: 100%;
+        width: 100%
     }
     #mobile-menu-open,
     #mobile-menu-close {
@@ -810,7 +833,12 @@ footer {
     }
     #menu li {
         display: block;
-        margin-bottom: 10px
+        margin-bottom: 10px;
+    }
+    #menu a{
+        color: #3498db;        
+        background-color: rgb(212, 212, 212);
+        border-radius: 30px;
     }
     #lead-content h1 {
         font-size: 2em
@@ -819,7 +847,7 @@ footer {
         font-size: 1.3em
     }
     #lead-content a {
-        padding: 10px 20px
+        padding: 10px 20px;        
     }
     #lead-down {
         display: none

@@ -10,8 +10,7 @@
     portfolio website.
 */
 
-(function($) {
-
+$(function() {
     // Remove no-js class
     $('html').removeClass('no-js');
 
@@ -94,4 +93,4 @@
         });
     });
 
-})(jQuery);
+});
