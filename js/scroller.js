@@ -8,13 +8,21 @@ $(function () {
     deactivatedElemArray.push(new ElementContainer(document.getElementById('scroller4')));
 
     assignSpacing();
+    update();
 
-    setInterval(() => {
-        deactivatedElemArray.forEach(element => {
-            moveElement(element);
-        });
-    }, 16);
+    // setInterval(() => {
+    //     deactivatedElemArray.forEach(element => {
+    //         moveElement(element);
+    //     });
+    // }, 16);
 });
+
+let update = function(){
+    deactivatedElemArray.forEach(element => {
+        moveElement(element);
+    });
+    window.requestAnimationFrame(update);
+}
 
 let assignSpacing = function()
 {
@@ -34,7 +42,7 @@ let moveElement = function (element) {
         element.count = 0;
     }
 
-    element.count += 1;
+    element.count += element.speed;
     element.sinStartValue += 0.05;
 
     let vPos = Math.sin(element.sinStartValue) * 20;
@@ -49,6 +57,7 @@ class ElementContainer {
         this.verticalStartPosition = (Math.random() * 20) + 40;
         this.maxDistanceOff = 165;
         this.sinStartValue = ((Math.random() * 2 * Math.PI));
+        this.speed = Math.random() + 2;
         _element.style.top = `${this.verticalStartPosition}vh`
     }
 }
