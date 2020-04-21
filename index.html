@@ -168,6 +168,25 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
+                        <img src="images/bulletin/1.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Bulletin Board</h3>
+                        <p>
+                            A bulletin board made in Node, using the MEVN stack. You can register/login and then post
+                            notes which are then saved in the Mongo database and visible to the world!. Authentication
+                            works through JWT Tokens.
+                            <br><br>
+                            Check it out: <span><a href="https://owais-bulletin-board.herokuapp.com/">Website</a></span>
+                        </p>
+                        <a id="proj7" class="view" href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+
+                <div class="project shadow-large">
+                    <div class="project-image">
                         <img src="images/petapp/1.png" />
                     </div>
                     <!-- End .project-image -->
@@ -286,8 +305,8 @@
         <h2 class="heading">Skills</h2>
         <ul>
             <li>.Net</li>
-            <li>Asp.Net</li>
             <li>JavaScript</li>
+            <li>Node</li>
             <li>HTML</li>
             <li>CSS</li>
             <li>C#</li>
@@ -410,6 +429,11 @@
             $('#proj6').click(function (e) {
                 e.preventDefault();
                 showProjectView('images/petapp/1.png', 'Scollar Pet App', 'The client had briefed me that he needed a mobile application and a server that would connect with his propietary dog collar. I needed to create an application for Android/iOs that connects to a central server in the house (RasPi). Another engineer was tasked with creating collars with small microcontrollers connected with LoRa transmitters. These transmitters would connect to the RasPi, and we could locate our pets and send instructions via our phones!', ['images/petapp/2.png', 'images/petapp/3.png', 'images/petapp/4.png']);
+            });
+
+            $('#proj7').click(function (e) {
+                e.preventDefault();
+                showProjectView('images/bulletin/1.png', 'Bulletin Board', 'A bulletin board made in Node, using the MEVN stack. You can register/login and then post notes which are then saved in the Mongo database and visible to the world!. Authentication works through JWT Tokens.\n\nCheck it out: https://owais-bulletin-board.herokuapp.com/', []);
             });
 
             //---------------------------------------
