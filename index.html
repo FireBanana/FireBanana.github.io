@@ -168,6 +168,23 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
+                        <img src="images/airplaneapp/1.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Airplane Estimator App</h3>
+                        <p>
+                            This is a SPA that lets you enter two cities and get an estimation of the cost based on
+                            cost/distance parameters. Uses Mapbox GL and Turf.Js to handle all the map related
+                            tasks.<br><a href="airplane.html">Check it out here</a>
+                        </p>
+                        <a id="proj8" class="view" href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+
+                <div class="project shadow-large">
+                    <div class="project-image">
                         <img src="images/bulletin/1.png" />
                     </div>
                     <!-- End .project-image -->
@@ -434,6 +451,11 @@
             $('#proj7').click(function (e) {
                 e.preventDefault();
                 showProjectView('images/bulletin/1.png', 'Bulletin Board', 'A bulletin board made in Node, using the MEVN stack. You can register/login and then post notes which are then saved in the Mongo database and visible to the world!. Authentication works through JWT Tokens.\n\nCheck it out: https://owais-bulletin-board.herokuapp.com/', []);
+            });
+
+            $('#proj8').click(function (e) {
+                e.preventDefault();
+                showProjectView('images/airplaneapp/1.png', 'Airplane Estimator App', 'This is a SPA that lets you enter two cities and get an estimation of the cost based on cost/distance parameters. Uses Mapbox GL and Turf.Js to handle all the map related tasks.', ['images/airplaneapp/2.png']);
             });
 
             //---------------------------------------

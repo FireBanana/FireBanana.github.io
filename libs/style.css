@@ -1,0 +1,141 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#main {
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FAD92C), to(#FFEE97));
+  background: linear-gradient(180deg, #FAD92C 0%, #FFEE97 100%);
+}
+
+#main .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#main .container h2 {
+  padding-top: 40px;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 51px;
+  letter-spacing: -0.065em;
+}
+
+#main .container h5 {
+  color: #7A7A7A;
+}
+
+#main .container .space {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#main #searchbar {
+  padding: 10px;
+  padding-top: 90px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#main #searchbar input {
+  height: 50px;
+  border-width: 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#main #buttoncontainer {
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#mapContainer {
+  height: 100vh;
+  width: 100vw;
+}
+
+#mapContainer #map {
+  height: 100%;
+  width: 100%;
+}
+
+#mapContainer #backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+  background-color: #FBDC3B;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+#mapContainer #mapOverlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: none;
+}
+
+#mapContainer #mapOverlay .space {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#mapContainer #mapOverlay h2 {
+  font-weight: bold;
+  letter-spacing: -0.065em;
+}
+
+#mapContainer #mapOverlay p {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: red;
+  color: yellow;
+}
+
+#mapContainer #mapOverlay button {
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 50px;
+  margin-bottom: 15px;
+  padding: 10px;
+  z-index: 100;
+  pointer-events: visible;
+}
+/*# sourceMappingURL=style.css.map */

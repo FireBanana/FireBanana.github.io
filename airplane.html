@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="libs/main.js"></script>
+    <link rel="stylesheet" href="libs/style.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://npmcdn.com/@turf/turf@5.1.6/turf.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div v-show="!isMap" id="main">
+            <div class="container">
+                <h2 class="text-center">Airview Flights</h2>
+                <div id="searchbar" class="row">
+                    <input placeholder="From" v-model="fromInput" class="col-sm-5 col-12 mt-2">
+                    <input placeholder="To" v-model="toInput" class="col-sm-5 col-12 mt-2">
+                </div>
+                <div id="buttoncontainer" class="row">
+                    <button @click="openMap()" class="btn btn-outline-dark mt-2 col-12">CHECK PRICES</button>
+                </div>
+                <div class="space"></div>
+                <h5 class="text-center">Current Price: $5000/hr</h5>
+                <h5 class="text-center">Average Speed: 760km/h</h5>
+                <div style="height: 30px;"></div>
+            </div>
+        </div>
+        <div v-show="isMap" id="mapContainer">
+            <div id='map'></div>
+            <!-- <div id="backdrop"></div> -->
+            <div id="mapOverlay">
+                <h2 class="text-center">Your Flight Estimate</h2>
+                <div>
+                    <p class="text-center">Price: ${{price}}</p>
+                </div>
+                <div class="space"></div>
+                <button @click="openWhatsapp()">CONTACT US</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
