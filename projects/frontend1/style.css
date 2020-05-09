@@ -1,0 +1,325 @@
+:root {
+  --backgroundColor: white;
+  --splashColor: hsl(225, 100%, 98%);
+  --cardColor: hsl(227, 47%, 96%);
+  --switchBackground: hsl(230, 22%, 74%);
+  --textColor: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: var(--textColor);
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+.container {
+  margin: 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 500px) {
+  .container {
+    margin: 0px 10vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .container .expander {
+    display: none;
+  }
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 500px) {
+  #topRow {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+}
+
+.expander {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.switch {
+  height: 23px;
+  width: 45px;
+  border-radius: 20px;
+  background: var(--switchBackground);
+}
+
+.switch .selector {
+  top: 2.5px;
+  left: 3px;
+  border-radius: 30px;
+  position: relative;
+  background-color: var(--backgroundColor);
+  height: 18px;
+  width: 18px;
+}
+
+.toggle {
+  left: 24px !important;
+}
+
+.vm {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.space {
+  height: 20px;
+}
+
+.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 500px) {
+  .card-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+.card-container .small-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--cardColor);
+  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+@media (min-width: 500px) {
+  .card-container .small-card {
+    width: 250px;
+  }
+}
+
+.card-container .small-card .row:first-child p {
+  color: grey;
+  font-weight: bold;
+}
+
+.card-container .small-card .row div {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.card-container .small-card .row div .increase {
+  color: #4bdb4b;
+  font-weight: bold;
+  display: inline;
+}
+
+.card-container .small-card .row div .decrease {
+  color: #dc414c;
+  font-weight: bold;
+  display: inline;
+}
+
+.card-container .big-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--cardColor);
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+@media (min-width: 500px) {
+  .card-container .big-card {
+    width: 250px;
+  }
+}
+
+.card-container .big-card .color-bar {
+  position: relative;
+  top: -30px;
+  height: 5px;
+  width: 100%;
+  background-color: blue;
+}
+
+.card-container .big-card .color-bar-yt {
+  position: relative;
+  top: -30px;
+  height: 5px;
+  width: 100%;
+  background-color: #c4032a;
+}
+
+.card-container .big-card .color-bar-gr {
+  position: relative;
+  top: -30px;
+  height: 5px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
+  background: linear-gradient(to right, #fdc468, #df4996);
+}
+
+.card-container .big-card .title {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-container .big-card .title p {
+  font-size: 14px;
+  color: grey;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.card-container .big-card h1 {
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
+.card-container .big-card > p {
+  font-size: 0.8rem;
+  font-weight: 200;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+.card-container .big-card div h2 {
+  color: #4bdb4b;
+  font-size: 0.6rem;
+  margin-top: 25px;
+}
+
+.divider {
+  height: 1px;
+  background-color: black;
+  margin: 0px 10vw;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 500px) {
+  .divider {
+    display: none;
+  }
+}
+
+.subtitle {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: grey;
+  margin-right: 0.3rem;
+}
+
+#heading {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: grey;
+}
+
+@media (min-width: 500px) {
+  #secondContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 30px;
+  }
+}
+
+#shade {
+  top: 0;
+  position: absolute;
+  height: 35vh;
+  width: 100vw;
+  background-color: var(--splashColor);
+  z-index: -1;
+}
+
+@media (max-width: 500px) {
+  #shade {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
