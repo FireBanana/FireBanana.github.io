@@ -167,6 +167,23 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
+                        <img src="images/jobsearch/1.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Job Scraper - Searches Remote Jobs</h3>
+                        <p>
+                            This is a scraper that picks up jobs from StackOverflow (Remote) and displays the using Vue.
+                            <br>
+                            <a href="https://owais-job-search.herokuapp.com/">Check it out here</a>
+                        </p>
+                        <a id="proj10" class="view" href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                
+                <div class="project shadow-large">
+                    <div class="project-image">
                         <img src="projects/frontend1/1.png" />
                     </div>
                     <!-- End .project-image -->
@@ -378,7 +395,7 @@
                     </span>
                 </div>
                 <div class="col-sm-5 social">
-                    <ul>
+                    <!-- <ul>
                         <li>
                             <a href="https://github.com/" target="_blank"><i class="fa fa-github"
                                     aria-hidden="true"></i></a>
@@ -403,7 +420,7 @@
                             <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"
                                     aria-hidden="true"></i></a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </div>
@@ -477,6 +494,11 @@
             $('#proj9').click(function (e) {
                 e.preventDefault();
                 showProjectView('projects/frontend1/1.png', 'Social Media Dashboard', 'Just a frontend example for a social media dashboard, complete with dark mode!', ['projects/frontend1/2.png']);
+            });
+
+            $('#proj10').click(function (e) {
+                e.preventDefault();
+                showProjectView('images/jobsearch/1.png', 'Job Scraper - Searches Remote Jobs', 'This is a scraper that picks up jobs from StackOverflow (Remote) and displays the using Vue.', ['images/jobsearch/2.png']);
             });
 
             //---------------------------------------
