@@ -137,7 +137,7 @@
         <h2 class="heading">Education</h2>
         <div class="education-block">
             <h3>Bahria University</h3>
-            <span class="education-date">Sept 2016 - June 2020(Expected)</span>
+            <span class="education-date">2016 - 2020</span>
             <h4>Bachelor of Software Engineering</h4>
             <p>
                 Currently in my final semester of software engineering. About to graduate soon!
@@ -164,6 +164,22 @@
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row">
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/vr/1.gif" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>VR Driving Simulator</h3>
+                        <p>
+                            This is a driving simulator that teaches the basics of driving a manual-transmission vehicle. Targeted towards
+                            driving schools, it uses the Oculus Quest and Unity to simulate the encironment.
+                        </p>
+                        <a id="proj11" class="view" href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
 
                 <div class="project shadow-large">
                     <div class="project-image">
@@ -499,6 +515,11 @@
             $('#proj10').click(function (e) {
                 e.preventDefault();
                 showProjectView('images/jobsearch/1.png', 'Job Scraper - Searches Remote Jobs', 'This is a scraper that picks up jobs from StackOverflow (Remote) and displays the using Vue.', ['images/jobsearch/2.png']);
+            });
+
+            $('#proj11').click(function (e) {
+                e.preventDefault();
+                showProjectView('images/vr/1.gif', 'VR Driving Simulator', 'This is a driving simulator that teaches the basics of driving a manual-transmission vehicle. Targeted towards driving schools, it uses the Oculus Quest and Unity to simulate the encironment.', ['images/vr/2.gif', 'images/vr/3.gif']);
             });
 
             //---------------------------------------
